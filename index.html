@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mooli&family=Quicksand:wght@500&family=Raleway:wght@300&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Random Names Picker</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <i class="fas fa-bars"></i>
+      <div class="menu">
+        <p>Color Picker</p>
+        <p>Creator Description</p>
+      </div>
+      <div class="innerCon">
+        <p class="mainTheme">Random Names Picker</p>
+        <p><i class="fab fa-instagram"></i>ftryas.n</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form">
+        <div class="con1">
+          <input
+            type="text"
+            id="input"
+            autocomplete="off"
+            placeholder="Insert a name"
+            maxlength="12"
+            oninput="validateInput()"
+          />
+          <p id="alert">The name has reached its max</p>
+          <button type="button" id="add">Add</button>
+        </div>
+        <div class="con2">
+          <p>Added Names</p>
+          <div class="actions">
+            <div class="buttons">
+              <button id="undo">Undo</button>
+              <button id="redo">Redo</button>
+            </div>
+          <input type="search" id="searchInput" placeholder="Search an added name">
+          </div>
+          <div class="nameLists"></div>
+          <p>Total Lists: <span class="len-name">0</span></p>
+        </div>
+      </div>
+      <div class="resultCon">
+        <h3>The Chosen Name Is</h3>
+        <div class="nameReveal">
+          <button type="button" id="random">Pick Randomly</button>
+          <h1 class="result"></h1>
+        </div>
+        <div>
+          <p>choosed names:</p>
+          <ol class="choosed"></ol>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
